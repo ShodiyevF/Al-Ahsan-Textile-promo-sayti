@@ -7,6 +7,14 @@ body {
     object-position: center;
 }
 
+.logo-img:hover {
+    opacity: 0.8;
+}
+
+.logo-img:active {
+    opacity: 0.6;
+}
+
 .site-header {
     background-color: #fff;
 }
@@ -31,9 +39,12 @@ body {
     line-height: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-decoration: none;
     list-style: none;
     color: #000;
+}
+
+.sitenav-link:hover {
+    color: #ff7500;
 }
 
 .siteheader-nav {
@@ -62,6 +73,10 @@ body {
     background-color: #ff7500;
     color: #fff;
     text-decoration: none;
+}
+
+.main-link:hover {
+    opacity: 0.8;
 }
 
 .orange-line {
@@ -106,10 +121,22 @@ body {
     object-position: center;
 }
 
+.footer-logo-img:hover {
+    opacity: 0.8;
+}
+
+.footer-logo-img:active {
+    opacity: 0.6;
+}
+
 .social-link {
     text-decoration: none;
     list-style: none;
     display: flex;
+}
+
+.social-link:hover {
+    color: #ff7500;
 }
 
 .site-footer-link {
