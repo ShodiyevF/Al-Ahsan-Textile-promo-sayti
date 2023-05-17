@@ -1,3 +1,7 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .logo-img {
     object-fit: cover;
     object-position: center;
@@ -12,19 +16,41 @@
     color: #fff;
 }
 
+.sitenav-right {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+
 .sitenav-link {
+    display: flex;
     text-decoration: none;
     font-weight: 500;
     font-size: 13px;
     line-height: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #000;
+    text-decoration: none;
     list-style: none;
+    color: #000;
+}
+
+.siteheader-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .site-main {
+    display: flex;
     list-style: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-link {
@@ -45,6 +71,8 @@
 }
 
 .icon-img {
+    width: 56px;
+    height: 56px;
     background: rgba(255, 117, 0, 0.2);;
     
 }
@@ -56,6 +84,9 @@
 .promo {
     background-color: #252420;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .site-footer {
@@ -63,7 +94,15 @@
     
 } 
 
+.site-footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer-logo-img {
+    width: 200px;
+    height: 100px;
     object-fit: cover;
     object-position: center;
 }
@@ -71,15 +110,16 @@
 .social-link {
     text-decoration: none;
     list-style: none;
+    display: flex;
 }
 
 .site-footer-link {
+    display: flex;
     text-decoration: none;
     font-weight: 500;
     font-size: 13px;
     line-height: 15px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #000;
     list-style: none;
 }
