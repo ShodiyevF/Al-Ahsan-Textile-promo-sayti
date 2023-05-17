@@ -70,11 +70,10 @@ body {
     background: #ff7500;
 }
 
-.icon-img {
-    width: 56px;
-    height: 56px;
-    background: rgba(255, 117, 0, 0.2);;
-    
+.features-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 117, 0, 0.2);
 }
 
 .promo-peregraph {
