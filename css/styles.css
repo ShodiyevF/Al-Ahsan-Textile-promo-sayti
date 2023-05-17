@@ -114,7 +114,6 @@ body {
 }
 
 .site-footer-link {
-    display: flex;
     text-decoration: none;
     font-weight: 500;
     font-size: 13px;
@@ -122,4 +121,8 @@ body {
     letter-spacing: 1px;
     color: #000;
     list-style: none;
+}
+
+.site-footer-bottom {
+    display: flex;
 }
