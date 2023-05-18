@@ -2,6 +2,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+*:focus {
+    outline: 2px dotted #ff7500;
+    outline-offset: 3px;
+}
+
 .logo-img {
     object-fit: cover;
     object-position: center;
