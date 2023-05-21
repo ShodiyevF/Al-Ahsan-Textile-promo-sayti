@@ -21,7 +21,10 @@ body {
 }
 
 .site-header {
+    border-top: 5px solid #ff7500;
     background-color: #fff;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .header-section {
@@ -36,7 +39,12 @@ body {
     list-style: none;
 }
 
+.link {
+    border-bottom: 3px solid #ff7500;
+}
+
 .sitenav-link {
+    padding: 0;
     display: flex;
     text-decoration: none;
     font-weight: 500;
@@ -59,6 +67,9 @@ body {
 }
 
 .site-main {
+    padding: 0;
+    padding-top: 210px;
+    padding-bottom: 210px;
     display: flex;
     list-style: none;
 }
@@ -67,9 +78,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.hero-img {
+    border-radius: 8px;
 }
 
 .main-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
     font-weight: 700;
     list-style: none;
     font-size: 13px;
@@ -86,6 +106,7 @@ body {
 
 .orange-line {
     width: 80px;
+    border: 0;
     height: 3px;
     background: #ff7500;
 }
@@ -93,6 +114,7 @@ body {
 .features-icon-wrapper {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
     background-color: rgba(255, 117, 0, 0.2);
 }
 
@@ -105,12 +127,20 @@ body {
     color: #fff;
     display: flex;
     align-items: center;
+    padding-top: 120px;
+    border-radius: 12px;
+    padding-bottom: 160px;
     justify-content: space-between;
+}
+
+.promo-img {
+    border-radius: 12px;
 }
 
 .site-footer {
     background: #f8f8f8;
-    
+    padding-top: 56px;
+    padding-bottom: 56px;
 } 
 
 .site-footer-actions {
@@ -138,6 +168,7 @@ body {
     text-decoration: none;
     list-style: none;
     display: flex;
+    padding: 0;
 }
 
 .social-link:hover {
@@ -156,4 +187,5 @@ body {
 
 .site-footer-bottom {
     display: flex;
+    padding: 0;
 }
