@@ -192,6 +192,10 @@
    align-items: center;
 }
 
+.currentColor:hover {
+   color: #ff7500
+}
+
 .site-footer-nav ul {
    display: flex;
 }
@@ -213,7 +217,7 @@
    width: 760px;
    height: 2px;
    background-color: rgba(37, 36, 32, 0.5);
-   border: 0;d
+   border: 0;
 }
 
 .site-footer-bottom {
