@@ -79,8 +79,8 @@ body {
     text-decoration: none;
     background-color: #ff7500;
     color: #fff;
-    margin-bottom: 27px;
     transition: background-color 0.5 ease;
+    margin-right: 15px;
  }
  
  .logo:hover {
