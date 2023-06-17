@@ -1,23 +1,15 @@
 const signupForm = document.querySelector('#signup-form')
 const username = document.querySelector('#username')
-
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    console.log(username.value)
-})
-
-username.addEventListener('click', (e) => {
-    const valueToLog = username.value; // Store the value before clearing
-    username.value = ''; // Clear the input value
-    console.log(valueToLog); // Log the stored value
-  });
-
-  
-
-  const body = document.querySelector('body')
+const body = document.querySelector('body')
 const container = document.querySelector('.container')
 const colorText = document.querySelector('.color-text')
 const copyMe = document.querySelector('.copyme')
+
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(username.value);
+    username.value = ''
+})
 
 const values = [
     '0',
@@ -59,12 +51,6 @@ function setGradient() {
     )`
 
     body.style.background = bgColor
-    colorText.textContent = bgColor
-
-    copyMe.addEventListener('click', (e) => {
-        navigator.clipboard.writeText(bgColor)
-        alert(`Copy bo'ldi `)
-    })
 
 }
 
