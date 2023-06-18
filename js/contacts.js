@@ -1,16 +1,16 @@
-const signupForm = document.querySelector('#signup-form')
-const username = document.querySelector('#username')
+const signupForm = document.querySelector('.signup-form')
+const username = document.querySelector('.username')
 const body = document.querySelector('body')
 const container = document.querySelector('.container')
 const colorText = document.querySelector('.color-text')
 const copyMe = document.querySelector('.copyme')
-
-
+  
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(username.value);
     username.value = ''
 })
+
 
 const values = [
     '0',
@@ -37,7 +37,7 @@ function getGradient() {
         const randomNumber = Math.trunc(Math.random() * values.length)
         color += values[randomNumber]
     }
-
+    
     return color
 }
 
@@ -49,10 +49,12 @@ function setGradient() {
         ${randomDeg}deg,
         ${color1},
         ${color2}
-    )`
-
-    body.style.background = bgColor
-
-}
-
-setGradient()
+        )`
+        
+        body.style.background = bgColor
+        
+    }
+    
+    setGradient()
+    
+    

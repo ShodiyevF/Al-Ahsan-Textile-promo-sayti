@@ -3,7 +3,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
  
- .site-header {
+ .site-header-top {
     margin-top: 12px;
     background-color: #fff;
     color: black;
@@ -92,6 +92,7 @@ body {
     padding: 0 10px;
     width: 150px;
     height: 300px;
+    margin-bottom: 10px;
 }
 
 .products:last-child {
