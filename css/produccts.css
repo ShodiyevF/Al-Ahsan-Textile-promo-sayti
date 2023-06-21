@@ -84,6 +84,7 @@ body {
 }
 
 .search input {
+    width: 300px;
     border: 2px solid #ff7500;
     border-radius: 5px;
     margin-right: auto;
@@ -110,7 +111,11 @@ body {
 
 
 .promo {
+    background-color: rgba(255, 117, 0, 0.2);
     margin-left: 60px;
+    border-radius: 10px;
+    border: #ff7500 solid 5px;
+    margin-bottom: 40px;
 }
 
 .promo-child {
@@ -120,17 +125,20 @@ body {
 
 .products {
     border-radius: 5px;
-    margin-right: 80px;
-    padding: 0 10px;
+    margin-right: 65px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 10px 10px;
     width: 150px;
     height: 300px;
 }
 
-.products:last-child {
+.products:last-child { 
     margin-right: 0;
 }
 
 .products a {
+    font-size: 13px;
     text-decoration: none;
     color: black;
 }
@@ -139,12 +147,17 @@ body {
     color: #ff7500;
 }
 
+.products img {
+    border-radius: 5px;
+}
+
 .follow-link {
     display: flex;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 117, 0, 0.2);
+    border: 5px solid #ff7500;
     border-radius: 10px;
     margin-bottom: 40px;
 }
