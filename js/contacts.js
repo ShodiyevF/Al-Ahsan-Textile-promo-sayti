@@ -1,9 +1,9 @@
 const signupForm = document.querySelector('.signup-form')
 const username = document.querySelector('.username')
+const firstname = document.querySelector('.firstname')
 const body = document.querySelector('body')
 const container = document.querySelector('.container')
 const colorText = document.querySelector('.color-text')
-const copyMe = document.querySelector('.copyme')
   
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -57,4 +57,14 @@ function setGradient() {
     
     setGradient()
     
-    
+    function chiqarish() {
+        console.log(`Kontakt web-sayt ga chiqarildi`);
+        var outputElement = document.getElementById("output");
+        outputElement.innerHTML = `${username.value} ${firstname.value}`;
+      }
+
+          function handleSubmit(event) {
+      event.preventDefault(); // Prevent page refresh
+      //console.log("Form submitted, page not refreshed.");
+      // Other operations...
+    }

@@ -236,3 +236,9 @@ body {
     background-color: #ffcc70;
  }
 
+ #output {
+   border: #fff solid 2px;
+   border-radius: 5px;
+   margin-bottom: 300px;
+   color: #000;
+ }

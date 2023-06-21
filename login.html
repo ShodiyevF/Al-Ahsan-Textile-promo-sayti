@@ -30,14 +30,20 @@
     </header>
 
     <main>
-        <section class="container">
+        <section class="container form-wrapper">
             <form id="signup-form">
-                <p>Iltimos e-mailingizni kiriting</p>
-                <input type="text" id="username" placeholder="e-mail">
-                <button class="submit-btn" type="submit">Submit</button>
+                <label for="username">Foydalanuvchi nomi:</label>
+                <input type="text" id="username" required><br>
+
+                <div class="password">
+                    <label for="password">Parol:</label>
+                    <input type="text" id="password" required>
+                </div>
+                    <button class="submit-btn" type="button" onclick="login()">Kirish</button>
             </form>
 
-            <div></div>
+            <div class="message"></div>
+            <div id="output"></div>
         </section>
     </main>
 

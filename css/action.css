@@ -1,22 +1,22 @@
 body {
     border-top: 4px solid #ff7500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
- 
- .site-header-top {
+}
+
+.site-header-top {
     margin-top: 12px;
     background-color: #fff;
     color: black;
- }
- 
- .site-header-top {
+}
+
+.site-header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
- }
- 
- .logo {
+}
+
+.logo {
     border-radius: 5px;
     padding-top: 12px;
     padding-right: 24px;
@@ -27,42 +27,42 @@ body {
     background-color: #ff7500;
     color: #fff;
     transition: background-color 0.5 ease;
- }
- 
- .logo:hover {
+}
+
+.logo:hover {
     background-color: rgba(255, 117, 0, 0.7);
- }
- 
- .site-header-right {
+}
+
+.site-header-right {
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
- 
- .site-header-nav ul {
+}
+
+.site-header-nav ul {
     display: flex;
- }
- 
- .site-header-nav a:hover {
+}
+
+.site-header-nav a:hover {
     color: #ff7500;
- }
- 
- .site-header-nav a {
+}
+
+.site-header-nav a {
     text-decoration: none;
     color: #000;
- }
- 
- .site-header-nav li {
+}
+
+.site-header-nav li {
     list-style: none;
     margin-right: 15px;
- }
- 
- .head-page {
+}
+
+.head-page {
     border-bottom: #ff7500 solid 4px;
- }
- 
- .header-follow-link {
+}
+
+.header-follow-link {
     padding-top: 12px;
     padding-right: 24px;
     padding-bottom: 12px;
@@ -71,11 +71,42 @@ body {
     background-color: #ff7500;
     color: #fff;
     border-radius: 5px;
- }
- 
- .header-follow-link:hover {
+}
+
+.header-follow-link:hover {
     background-color: rgba(255, 117, 0, 0.7);
- }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 2px solid #ff7500;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3px;
+}
+.search h2 {
+    margin-left: 30px;
+}
+
+.search-wrapper button {
+    border: 2px solid #ff7500;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #fff;
+    color: #000;
+}
+.search-wrapper button:hover {
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #ff7500;
+    color: #fff;
+}
 
 .promo {
     margin-left: 60px;

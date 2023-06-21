@@ -77,6 +77,38 @@ body {
     background-color: rgba(255, 117, 0, 0.7);
  }
 
+ .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 2px solid #ff7500;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3px;
+}
+.search h2 {
+    margin-left: 30px;
+}
+
+.search-wrapper button {
+    border: 2px solid #ff7500;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #fff;
+    color: #000;
+}
+.search-wrapper button:hover {
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #ff7500;
+    color: #fff;
+}
+
+
 .promo {
     margin-left: 60px;
 }

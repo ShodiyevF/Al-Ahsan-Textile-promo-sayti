@@ -30,36 +30,36 @@
             </div>
         </div>
     </header>
-
+    
     <main>
         <h1>Kontaktlar</h1>
-
+        
         <section class="container">
             <div class="form-wrapper">
-                <form class="signup-form">
-                    <input type="text" class="username" placeholder="Username...">
+                <form onsubmit="handleSubmit(event)" class="signup-form">
+                    <input type="text" class="username" placeholder="Familiya...">
                 </form>
                 
-                <form class="signup-form">
-                    <input type="text" class="username" placeholder="First name...">
-                    <button class="submit-btn" type="submit">Submit</button>
-                </form>
-                <div></div>
-                <div id="output"></div>
-            </div>
-        </section>
-
+                    <form onsubmit="handleSubmit(event)" class="signup-form">
+                        <input type="text" class="username firstname" placeholder="Ism...">
+                        <button class="submit-btn" type="submit" onclick="chiqarish()">Qo'shish</button>
+                    </form>
+                </section>
+                    <div class="message"></div>
+                    <div id="output"></div>
+                </div>
+        
         <!-- logo cha -->
-
+        
         <small class="copyright">
             by
             <a href="https://al-ahsan-textile.netlify.app/">Zakiyyulloh Ma'murov</a>
             <p class="bold">AAT &copy; 2018. All Rights Reserved</p>
         </small>
-
+        
     </main>
-
+    
     <script src="js/contacts.js"></script>
-
+    
 </body>
 </html>

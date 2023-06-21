@@ -6,6 +6,21 @@ const colorText = document.querySelector('.color-text')
 const copyMe = document.querySelector('.copyme')
 
 
+
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Foydalanuvchi nomi va parolni tekshirish
+    if (username === "admin" && password === "admin123") {
+      alert("Kirish muvaffaqiyatli!");
+      // Kirish muvaffaqiyatli bo'lsa, boshqa operatsiyalar bajarilishi mumkin
+      // Masalan, sahifani boshqarish yoki yonalishni o'zgartirish
+    } else {
+      alert("Foydalanuvchi nomi yoki parol noto'g'ri!");
+    }
+  }
+
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(username.value);
@@ -56,3 +71,9 @@ function setGradient() {
 }
 
 setGradient()
+
+function chiqarish() {
+    console.log("Ro'yxatga kiritildi!");
+    var outputElement = document.getElementById("output");
+    outputElement.innerHTML = "Siz ro'yxatdan o'tdingiz";
+  }
