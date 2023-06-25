@@ -240,5 +240,15 @@ body {
    border: #fff solid 2px;
    border-radius: 5px;
    margin-bottom: 300px;
-   color: #000;
+   color: #fff;
+}
+
+.small-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.small-wrapper a {
+   text-decoration: none;
 }

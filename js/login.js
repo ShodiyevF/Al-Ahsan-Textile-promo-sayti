@@ -1,3 +1,4 @@
+
 const signupForm = document.querySelector('#signup-form')
 const username = document.querySelector('#username')
 const body = document.querySelector('body')

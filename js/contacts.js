@@ -60,7 +60,7 @@ function setGradient() {
     function chiqarish() {
         console.log(`Kontakt web-sayt ga chiqarildi`);
         var outputElement = document.getElementById("output");
-        outputElement.innerHTML = `${username.value} ${firstname.value}`;
+        outputElement.innerHTML = `✋${username.value}✋ ✋${firstname.value}✋`;
       }
 
           function handleSubmit(event) {
