@@ -153,7 +153,8 @@ body {
 
 .submit-btn:hover {
    background-color: #ffcc70;
-   padding: 5px 170px;
+   padding: 5px 110px;
+   box-shadow: 0px 26px 70px 1px rgba(0, 0, 0, 0.8);
 }
 
 .message {

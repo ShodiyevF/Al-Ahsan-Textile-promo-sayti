@@ -13,7 +13,7 @@ function login() {
     var password = document.getElementById("password").value;
 
     // Foydalanuvchi nomi va parolni tekshirish
-    if (username === "admin" && password === "admin123") {
+    if (username === `${username.value}` && password === `${password.value}`) {
       alert("Kirish muvaffaqiyatli!");
       // Kirish muvaffaqiyatli bo'lsa, boshqa operatsiyalar bajarilishi mumkin
       // Masalan, sahifani boshqarish yoki yonalishni o'zgartirish
