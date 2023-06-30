@@ -91,6 +91,7 @@ body {
     margin-left: auto;
     padding: 3px;
 }
+
 .search h2 {
     margin-left: 30px;
 }
@@ -102,6 +103,7 @@ body {
     background-color: #fff;
     color: #000;
 }
+
 .search-wrapper button:hover {
     border-radius: 5px;
     padding: 3px;
@@ -133,6 +135,7 @@ body {
     width: 150px;
     /* height: 300px; */
 }
+
 .products:hover {
     background-color: #ff7500;
     color: #fff;
