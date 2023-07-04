@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Search</title>
+</head>
+<body>
+  <h1>Website Search</h1>
+  <input type="text" id="searchInput" placeholder="Enter your search query">
+  <button onclick="search()">Search</button>
+  
+  <div id="searchResults"></div>
+  
+  <script>
+    function search() {
+      var query = document.getElementById('searchInput').value;
+      var searchResults = performSearch(query);
+      displaySearchResults(searchResults);
+    }
+    
+    function performSearch(query) {
+      // Replace this with your own search logic
+      // You can use APIs, search algorithms, or search through your website's content
+      
+      // For demonstration purposes, returning mock search results
+      var mockResults = [
+        { title: "Result 1", url: "http://example.com/result1" },
+        { title: "Result 2", url: "http://example.com/result2" },
+        { title: "Result 3", url: "http://example.com/result3" }
+      ];
+      
+      return mockResults;
+    }
+    
+    function displaySearchResults(results) {
+      var searchResultsContainer = document.getElementById('searchResults');
+      searchResultsContainer.innerHTML = '';
+      
+      if (results.length === 0) {
+        searchResultsContainer.innerHTML = 'No results found.';
+      } else {
+        for (var i = 0; i < results.length; i++) {
+          var result = results[i];
+          var resultElement = document.createElement('a');
+          resultElement.href = result.url;
+          resultElement.textContent = result.title;
+          searchResultsContainer.appendChild(resultElement);
+          searchResultsContainer.appendChild(document.createElement('br'));
+        }
+      }
+    }
+  </script>
+</body>
+</html>

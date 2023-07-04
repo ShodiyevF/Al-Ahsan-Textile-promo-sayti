@@ -252,3 +252,14 @@ body {
 .small-wrapper a {
    text-decoration: none;
 }
+
+.phone-number {
+   border: #fff 3px solid;
+   border-radius: 5px;
+   padding: 10px;
+   background: linear-gradient(321deg, rgb(151, 162, 227), rgb(221, 167, 150));
+}
+
+.phone-number p a {
+   color: #000;
+}
