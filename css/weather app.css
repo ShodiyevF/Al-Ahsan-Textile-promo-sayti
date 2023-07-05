@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border-top: 4px solid #ff7500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+ .site-header {
+    margin-top: 12px;
+    background-color: #fff;
+    color: black;
+ }
+ 
+ .site-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+ 
+ .logo {
+    border-radius: 5px;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #ff7500;
+    color: #fff;
+    transition: background-color 0.5 ease;
+ }
+ 
+ .logo:hover {
+    background-color: rgba(255, 117, 0, 0.7);
+ }
+ 
+ .site-header-right {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .site-header-nav ul {
+    display: flex;
+ }
+ 
+ .site-header-nav a:hover {
+    color: #ff7500;
+ }
+ 
+ .site-header-nav a {
+    text-decoration: none;
+    color: #000;
+ }
+ 
+ .site-header-nav li {
+    list-style: none;
+    margin-right: 15px;
+ }
+ 
+ .head-page {
+    border-bottom: #ff7500 solid 4px;
+ }
+ 
+ .follow-link {
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    text-decoration: none;
+    background-color: #ff7500;
+    color: #fff;
+    border-radius: 5px;
+ }
+ 
+ .follow-link:hover {
+    background-color: rgba(255, 117, 0, 0.7);
+ }
+
+ .card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(153deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+ }
+
+ .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+ }
+
+ .search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+ }
+
+ .search button img {
+    width: 16px;
+ }
+
+ .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+ }
