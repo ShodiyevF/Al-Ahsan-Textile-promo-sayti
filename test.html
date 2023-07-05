@@ -1,53 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Website Search</title>
+  <title>To-Do List</title>
 </head>
 <body>
-  <h1>Website Search</h1>
-  <input type="text" id="searchInput" placeholder="Enter your search query">
-  <button onclick="search()">Search</button>
-  
-  <div id="searchResults"></div>
-  
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+
+    <input type="text" id="todoInput" class="todo-input" placeholder="Add a new task">
+    <button onclick="addTodo()">Add</button>
+
+    <div id="todoList"></div>
+  </div>
+
   <script>
-    function search() {
-      var query = document.getElementById('searchInput').value;
-      var searchResults = performSearch(query);
-      displaySearchResults(searchResults);
+    var todoList = [];
+
+    // Load stored todo list from local storage
+    var storedTodoList = localStorage.getItem("todoList");
+    if (storedTodoList) {
+      todoList = JSON.parse(storedTodoList);
     }
-    
-    function performSearch(query) {
-      // Replace this with your own search logic
-      // You can use APIs, search algorithms, or search through your website's content
-      
-      // For demonstration purposes, returning mock search results
-      var mockResults = [
-        { title: "Result 1", url: "http://example.com/result1" },
-        { title: "Result 2", url: "http://example.com/result2" },
-        { title: "Result 3", url: "http://example.com/result3" }
-      ];
-      
-      return mockResults;
+
+    function addTodo() {
+      var todoInput = document.getElementById("todoInput");
+      var todoText = todoInput.value.trim();
+
+      if (todoText !== "") {
+        var todoItem = {
+          id: Date.now(),
+          text: todoText,
+          completed: false
+        };
+
+        todoList.push(todoItem);
+        saveTodoList(); // Save the updated todo list to local storage
+        renderTodoList();
+
+        todoInput.value = "";
+      }
     }
-    
-    function displaySearchResults(results) {
-      var searchResultsContainer = document.getElementById('searchResults');
-      searchResultsContainer.innerHTML = '';
-      
-      if (results.length === 0) {
-        searchResultsContainer.innerHTML = 'No results found.';
-      } else {
-        for (var i = 0; i < results.length; i++) {
-          var result = results[i];
-          var resultElement = document.createElement('a');
-          resultElement.href = result.url;
-          resultElement.textContent = result.title;
-          searchResultsContainer.appendChild(resultElement);
-          searchResultsContainer.appendChild(document.createElement('br'));
+
+    function renderTodoList() {
+      var todoListContainer = document.getElementById("todoList");
+      todoListContainer.innerHTML = "";
+
+      todoList.forEach(function(todoItem) {
+        var todoItemId = "todoItem_" + todoItem.id;
+
+        var todoItemElement = document.createElement("div");
+        todoItemElement.classList.add("todo-item");
+
+        var checkboxElement = document.createElement("input");
+        checkboxElement.setAttribute("type", "checkbox");
+        checkboxElement.setAttribute("id", todoItemId);
+        checkboxElement.checked = todoItem.completed;
+        checkboxElement.addEventListener("change", function() {
+          toggleTodoCompleted(todoItem.id);
+        });
+
+        var labelElement = document.createElement("label");
+        labelElement.setAttribute("for", todoItemId);
+        labelElement.textContent = todoItem.text;
+
+        var editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.addEventListener("click", function() {
+          editTodoItem(todoItem.id);
+        });
+
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function() {
+          deleteTodoItem(todoItem.id);
+        });
+
+        todoItemElement.appendChild(checkboxElement);
+        todoItemElement.appendChild(labelElement);
+        todoItemElement.appendChild(editButton);
+        todoItemElement.appendChild(deleteButton);
+
+        todoListContainer.appendChild(todoItemElement);
+      });
+    }
+
+    function toggleTodoCompleted(itemId) {
+      var todoItem = todoList.find(function(item) {
+        return item.id === itemId;
+      });
+
+      if (todoItem) {
+        todoItem.completed = !todoItem.completed;
+        saveTodoList(); // Save the updated todo list to local storage
+        renderTodoList();
+      }
+    }
+
+    function editTodoItem(itemId) {
+      var todoItem = todoList.find(function(item) {
+        return item.id === itemId;
+      });
+
+      if (todoItem) {
+        var newText = prompt("Enter the new text for the item:", todoItem.text);
+
+        if (newText !== null && newText.trim() !== "") {
+          todoItem.text = newText.trim();
+          saveTodoList(); // Save the updated todo list to local storage
+          renderTodoList();
         }
       }
     }
+
+    function deleteTodoItem(itemId) {
+      var itemIndex = todoList.findIndex(function(item) {
+        return item.id === itemId;
+      });
+
+      if (itemIndex !== -1) {
+        todoList.splice(itemIndex, 1);
+        saveTodoList(); // Save the updated todo list to local storage
+        renderTodoList();
+      }
+    }
+
+    function saveTodoList() {
+      localStorage.setItem("todoList", JSON.stringify(todoList));
+    }
+
+    // Initial rendering of the todo list
+    renderTodoList();
   </script>
 </body>
 </html>

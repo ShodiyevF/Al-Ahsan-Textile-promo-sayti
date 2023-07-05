@@ -218,7 +218,11 @@ body {
    align-items: center;
 }
 
-.username {
+.todo-container {
+   margin-bottom: 80px;
+}
+
+.todo-input {
    border: 0;
    color: #000;
    padding: 4px;
@@ -230,11 +234,27 @@ body {
    border: 0;
    border-radius: 5px;
    padding: 5px;
+   cursor: pointer;
 }
 
-.submit-btn:active {
-   background-color: #ffcc70;
+.submit-btn:hover {
+   background-color: #ffcc77;
 }
+
+#todoList input {
+   display: none;
+}
+
+#todoList button {
+   background-color: #ff7500;
+   border: 0;
+   border-radius: 5px;
+   padding: 5px;
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+#todoList button:hover
 
 #output {
    border: #fff solid 2px;
@@ -244,6 +264,7 @@ body {
 }
 
 .small-wrapper {
+   bottom: 50px;
    display: flex;
    justify-content: space-between;
    align-items: center;
