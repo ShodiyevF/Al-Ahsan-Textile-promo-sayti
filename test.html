@@ -1,135 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>To-Do List</title>
+  <title>Email Address Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .email-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .email-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div class="todo-container">
-    <h1>To-Do List</h1>
-
-    <input type="text" id="todoInput" class="todo-input" placeholder="Add a new task">
-    <button onclick="addTodo()">Add</button>
-
-    <div id="todoList"></div>
+  <div class="email-container">
+    <h1>Enter Your Email Address</h1>
+    <input type="email" id="email" class="email-input" placeholder="Email Address">
+    <button onclick="submitEmail()" class="submit-button">Submit</button>
   </div>
 
   <script>
-    var todoList = [];
+    function submitEmail() {
+      var emailInput = document.getElementById("email");
+      var emailAddress = emailInput.value.trim();
 
-    // Load stored todo list from local storage
-    var storedTodoList = localStorage.getItem("todoList");
-    if (storedTodoList) {
-      todoList = JSON.parse(storedTodoList);
-    }
-
-    function addTodo() {
-      var todoInput = document.getElementById("todoInput");
-      var todoText = todoInput.value.trim();
-
-      if (todoText !== "") {
-        var todoItem = {
-          id: Date.now(),
-          text: todoText,
-          completed: false
-        };
-
-        todoList.push(todoItem);
-        saveTodoList(); // Save the updated todo list to local storage
-        renderTodoList();
-
-        todoInput.value = "";
+      // Validate the email address
+      if (validateEmail(emailAddress)) {
+        // Email address is valid
+        alert("Email address submitted: " + emailAddress);
+        // Perform additional actions, such as sending the email address to the server
+      } else {
+        // Invalid email address
+        alert("Invalid email address.");
       }
     }
 
-    function renderTodoList() {
-      var todoListContainer = document.getElementById("todoList");
-      todoListContainer.innerHTML = "";
-
-      todoList.forEach(function(todoItem) {
-        var todoItemId = "todoItem_" + todoItem.id;
-
-        var todoItemElement = document.createElement("div");
-        todoItemElement.classList.add("todo-item");
-
-        var checkboxElement = document.createElement("input");
-        checkboxElement.setAttribute("type", "checkbox");
-        checkboxElement.setAttribute("id", todoItemId);
-        checkboxElement.checked = todoItem.completed;
-        checkboxElement.addEventListener("change", function() {
-          toggleTodoCompleted(todoItem.id);
-        });
-
-        var labelElement = document.createElement("label");
-        labelElement.setAttribute("for", todoItemId);
-        labelElement.textContent = todoItem.text;
-
-        var editButton = document.createElement("button");
-        editButton.textContent = "Edit";
-        editButton.addEventListener("click", function() {
-          editTodoItem(todoItem.id);
-        });
-
-        var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.addEventListener("click", function() {
-          deleteTodoItem(todoItem.id);
-        });
-
-        todoItemElement.appendChild(checkboxElement);
-        todoItemElement.appendChild(labelElement);
-        todoItemElement.appendChild(editButton);
-        todoItemElement.appendChild(deleteButton);
-
-        todoListContainer.appendChild(todoItemElement);
-      });
+    function validateEmail(email) {
+      // A basic email address validation using regular expression
+      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
     }
-
-    function toggleTodoCompleted(itemId) {
-      var todoItem = todoList.find(function(item) {
-        return item.id === itemId;
-      });
-
-      if (todoItem) {
-        todoItem.completed = !todoItem.completed;
-        saveTodoList(); // Save the updated todo list to local storage
-        renderTodoList();
-      }
-    }
-
-    function editTodoItem(itemId) {
-      var todoItem = todoList.find(function(item) {
-        return item.id === itemId;
-      });
-
-      if (todoItem) {
-        var newText = prompt("Enter the new text for the item:", todoItem.text);
-
-        if (newText !== null && newText.trim() !== "") {
-          todoItem.text = newText.trim();
-          saveTodoList(); // Save the updated todo list to local storage
-          renderTodoList();
-        }
-      }
-    }
-
-    function deleteTodoItem(itemId) {
-      var itemIndex = todoList.findIndex(function(item) {
-        return item.id === itemId;
-      });
-
-      if (itemIndex !== -1) {
-        todoList.splice(itemIndex, 1);
-        saveTodoList(); // Save the updated todo list to local storage
-        renderTodoList();
-      }
-    }
-
-    function saveTodoList() {
-      localStorage.setItem("todoList", JSON.stringify(todoList));
-    }
-
-    // Initial rendering of the todo list
-    renderTodoList();
   </script>
 </body>
 </html>

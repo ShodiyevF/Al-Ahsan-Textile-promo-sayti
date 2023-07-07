@@ -242,6 +242,21 @@ body {
    background-color: #ffcc77;
 }
 
+#todoList {
+   width: 280px;
+   border: #fff 3px solid;
+   border-radius: 10px;
+   margin-left: 82px;
+}
+
+.todo-item {
+   margin-bottom: 10px;
+}
+
+.todo-item:last-child {
+   margin-bottom: 5px;
+}
+
 #todoList input {
    display: none;
 }

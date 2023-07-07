@@ -71,6 +71,9 @@
 
     //boshqa
 
+    const copyMe = document.querySelector('.copyme')
+    const copyMe1 = document.querySelector('.copyme1')
+
     var todoList = [];
 
     // Load stored todo list from local storage
@@ -187,3 +190,17 @@
 
     // Initial rendering of the todo list
     renderTodoList();
+
+
+
+    copyMe.addEventListener('click', (e) => {
+        navigator.clipboard.writeText("+998906271015")
+        alert(`Nusxa olindi `)
+    })
+
+    copyMe1.addEventListener('click', (e) => {
+        navigator.clipboard.writeText("+998903051412")
+        alert(`Nusxa olindi `)
+    })
+
+
