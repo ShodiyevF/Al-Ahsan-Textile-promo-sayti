@@ -195,12 +195,12 @@
 
     copyMe.addEventListener('click', (e) => {
         navigator.clipboard.writeText("+998906271015")
-        alert(`Nusxa olindi `)
+        alert(`Nusxa olindi!`)
     })
 
     copyMe1.addEventListener('click', (e) => {
         navigator.clipboard.writeText("+998903051412")
-        alert(`Nusxa olindi `)
+        alert(`Nusxa olindi!`)
     })
 
 
