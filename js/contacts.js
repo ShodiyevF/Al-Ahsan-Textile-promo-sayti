@@ -59,7 +59,7 @@
     
 //     function chiqarish() {
 //         console.log(`Kontakt web-sayt ga chiqarildi`);
-//         var outputElement = document.getElementById("output");
+//         let outputElement = document.getElementById("output");
 //         outputElement.innerHTML = `✋${username.value}✋ ✋${firstname.value}✋`;
 //       }
 
@@ -74,20 +74,20 @@
     const copyMe = document.querySelector('.copyme')
     const copyMe1 = document.querySelector('.copyme1')
 
-    var todoList = [];
+    let todoList = [];
 
     // Load stored todo list from local storage
-    var storedTodoList = localStorage.getItem("todoList");
+    let storedTodoList = localStorage.getItem("todoList");
     if (storedTodoList) {
       todoList = JSON.parse(storedTodoList);
     }
 
     function addTodo() {
-      var todoInput = document.getElementById("todoInput");
-      var todoText = todoInput.value.trim();
+      let todoInput = document.getElementById("todoInput");
+      let todoText = todoInput.value.trim();
 
       if (todoText !== "") {
-        var todoItem = {
+        let todoItem = {
           id: Date.now(),
           text: todoText,
           completed: false
@@ -102,16 +102,16 @@
     }
 
     function renderTodoList() {
-      var todoListContainer = document.getElementById("todoList");
+      let todoListContainer = document.getElementById("todoList");
       todoListContainer.innerHTML = "";
 
       todoList.forEach(function(todoItem) {
-        var todoItemId = "todoItem_" + todoItem.id;
+        let todoItemId = "todoItem_" + todoItem.id;
 
-        var todoItemElement = document.createElement("div");
+        let todoItemElement = document.createElement("div");
         todoItemElement.classList.add("todo-item");
 
-        var checkboxElement = document.createElement("input");
+        let checkboxElement = document.createElement("input");
         checkboxElement.setAttribute("type", "checkbox");
         checkboxElement.setAttribute("id", todoItemId);
         checkboxElement.checked = todoItem.completed;
@@ -119,17 +119,17 @@
           toggleTodoCompleted(todoItem.id);
         });
 
-        var labelElement = document.createElement("label");
+        let labelElement = document.createElement("label");
         labelElement.setAttribute("for", todoItemId);
         labelElement.textContent = todoItem.text;
 
-        var editButton = document.createElement("button");
+        let editButton = document.createElement("button");
         editButton.textContent = "Edit";
         editButton.addEventListener("click", function() {
           editTodoItem(todoItem.id);
         });
 
-        var deleteButton = document.createElement("button");
+        let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.addEventListener("click", function() {
           deleteTodoItem(todoItem.id);
@@ -145,7 +145,7 @@
     }
 
     function toggleTodoCompleted(itemId) {
-      var todoItem = todoList.find(function(item) {
+      let todoItem = todoList.find(function(item) {
         return item.id === itemId;
       });
 
@@ -157,12 +157,12 @@
     }
 
     function editTodoItem(itemId) {
-      var todoItem = todoList.find(function(item) {
+      let todoItem = todoList.find(function(item) {
         return item.id === itemId;
       });
 
       if (todoItem) {
-        var newText = prompt("Enter the new text for the item:", todoItem.text);
+        let newText = prompt("Enter the new text for the item:", todoItem.text);
 
         if (newText !== null && newText.trim() !== "") {
           todoItem.text = newText.trim();
@@ -173,7 +173,7 @@
     }
 
     function deleteTodoItem(itemId) {
-      var itemIndex = todoList.findIndex(function(item) {
+      let itemIndex = todoList.findIndex(function(item) {
         return item.id === itemId;
       });
 
