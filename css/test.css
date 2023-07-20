@@ -1,0 +1,6 @@
+  body {
+  margin: 0;
+  padding: 0;
+  /* Replace the colors with your desired linear gradient */
+  background: linear-gradient(to bottom, #00a1e4, #007cb5);
+}
